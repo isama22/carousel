@@ -12,3 +12,9 @@
   background-color: aqua;
   margin: 20px;
 }
+
+.carousel {
+  width: 80%;
+  height: 300px;
+  margin: 50px auto;
+}
