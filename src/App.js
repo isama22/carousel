@@ -4,45 +4,48 @@ import Carousel from 'react-spring-3d-carousel';
 import { v4 as uuid } from 'uuid';
 import { config } from "react-spring";
 
+
+
 class App extends Component {
   state = {
-    offsetRadius: 15,
+    offsetRadius: 10,
     showNavigation: true,
-    config: config.slow
+    config: config.slow,
+    goToSlide: 0,
   };
 
   slides = [
     {
       key: uuid(),
-      content: <img src="https://picsum.photos/800/801/?random" alt="1" />
+      content: <div className="home">hi</div>
     },
     {
       key: uuid(),
-      content: <img src="https://picsum.photos/800/802/?random" alt="2" />
+      content: <div className="home">hi</div>
     },
     {
       key: uuid(),
-      content: <img src="https://picsum.photos/600/803/?random" alt="3" />
+      content: <div className="home">hi</div>
     },
     {
       key: uuid(),
-      content: <img src="https://picsum.photos/800/500/?random" alt="4" />
+      content: <div className="home">hi</div>
     },
     {
       key: uuid(),
-      content: <img src="https://picsum.photos/800/804/?random" alt="5" />
+      content: <div className="home">hi</div>
     },
     {
       key: uuid(),
-      content: <img src="https://picsum.photos/500/800/?random" alt="6" />
+      content: <div className="home">hi</div>
     },
     {
       key: uuid(),
-      content: <img src="https://picsum.photos/800/600/?random" alt="7" />
+      content: <div className="home">hi</div>
     },
     {
       key: uuid(),
-      content: <img src="https://picsum.photos/805/800/?random" alt="8" />
+      content: <div className="home">hi</div>
     }
   ].map((slide, index) => {
     return { ...slide, onClick: () => this.setState({ goToSlide: index }) };
@@ -63,6 +66,7 @@ class App extends Component {
           offsetRadius={this.state.offsetRadius}
           showNavigation={this.state.showNavigation}
           animationConfig={this.state.config}
+          goToSlide={this.state.goToSlide}
         />
       </div>
     );
