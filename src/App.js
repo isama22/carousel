@@ -8,8 +8,7 @@ import { config } from "react-spring";
 
 class App extends Component {
   state = {
-    offsetRadius: 10,
-    showNavigation: true,
+    offsetRadius: 2,
     config: config.slow,
     goToSlide: 0,
   };
@@ -60,14 +59,17 @@ class App extends Component {
 
   render() {
     return (
-      <div className="carousel">
-        <Carousel
-          slides={this.slides}
-          offsetRadius={this.state.offsetRadius}
-          showNavigation={this.state.showNavigation}
-          animationConfig={this.state.config}
-          goToSlide={this.state.goToSlide}
-        />
+      <div className="app">
+        <div className="carousel-container">
+          <div className="carousel">
+            <Carousel
+              slides={this.slides}
+              offsetRadius={this.state.offsetRadius}
+              animationConfig={this.state.config}
+              goToSlide={this.state.goToSlide}
+            />
+          </div>
+        </div>
       </div>
     );
   }
