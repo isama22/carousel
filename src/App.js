@@ -4,8 +4,6 @@ import Carousel from 'react-spring-3d-carousel';
 import { v4 as uuid } from 'uuid';
 import { config } from "react-spring";
 
-
-
 class App extends Component {
   state = {
     offsetRadius: 2,
@@ -14,18 +12,6 @@ class App extends Component {
   };
 
   slides = [
-    {
-      key: uuid(),
-      content: <div className="home">hi</div>
-    },
-    {
-      key: uuid(),
-      content: <div className="home">hi</div>
-    },
-    {
-      key: uuid(),
-      content: <div className="home">hi</div>
-    },
     {
       key: uuid(),
       content: <div className="home">hi</div>
@@ -58,6 +44,8 @@ class App extends Component {
 
 
   render() {
+
+
     return (
       <div className="app">
         <div className="carousel-container">
@@ -71,6 +59,7 @@ class App extends Component {
           </div>
         </div>
       </div>
+
     );
   }
 }
